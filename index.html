@@ -8,25 +8,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-  <div class="container my-3 text-center">
+  <div class="container my-5 text-center">
   	<div class="row">
-  		<div class="col-6">
-  			<h1 class="display-5 my-3">Click <span class="text-primary" id="cat-name1"></span>!</h1>
-  			<img src="https://lh3.ggpht.com/nlI91wYNCrjjNy5f-S3CmVehIBM4cprx-JFWOztLk7vFlhYuFR6YnxcT446AvxYg4Ab7M1Fy0twaOCWYcUk=s0#w=640&h=426" class="img-fluid rounded mx-auto d-block" id="cat-pic1" alt="Picture of a cat">
-  			<h3 class="my-4">Times clicked:</h3>
-  			<p class="display-3 text-primary" id="counter1">0</p>
+  		<div class="col-3 border" id="cat-list">
+  			<h1 class="display-5 my-3">Pick a cat!</h1>
+  			<div class="list-group" id="list-tab" role="tablist">
+  			</div>
   		</div>
 
-  		<div class="col-6">
-  			<h1 class="display-5 my-3">Click <span class="text-primary" id="cat-name2"></span>!</h1>
-  			<img src="https://lh3.ggpht.com/kixazxoJ2ufl3ACj2I85Xsy-Rfog97BM75ZiLaX02KgeYramAEqlEHqPC3rKqdQj4C1VFnXXryadFs1J9A=s0#w=640&h=496" class="img-fluid rounded mx-auto d-block" id="cat-pic2" alt="Picture of a cat">
-  			<h3 class="my-4">Times clicked:</h3>
-  			<p class="display-3 text-primary" id="counter2">0</p>
+  		<div class="col-9 border">
+  			<div class="tab-content" id="nav-tabContent">
+  			</div>
   		</div>
-
   	</div>
 
   </div>
