@@ -14,14 +14,20 @@
 <body>
   <div class="container my-5 text-center">
   	<div class="row">
-  		<div class="col-3 border" id="cat-list">
-  			<h1 class="display-5 my-3">Pick a cat!</h1>
-  			<div class="list-group" id="list-tab" role="tablist">
+  		<!-- Cat names nav column -->
+  		<div class="col-3 border pb-5" id="cat-list">
+  			<h1 class="display-4 my-3">Cats</h1>
+  			<div class="list-group" id="names">
   			</div>
   		</div>
-
+  		<!-- Current cat display column -->
   		<div class="col-9 border">
-  			<div class="tab-content" id="nav-tabContent">
+  			<h1 class="display-1 my-5" id="intro">Choose a cat from the left!</h1>
+  			<div id="cat-info" style="display: none;">
+  				<h1 class="display-4 my-3">Click <span class="text-primary" id="cat-name"></span>!</h1>
+  				<img src="" class="img-fluid rounded mx-auto d-block cat-img" id="cat-pic" alt="...">
+  				<h3 class="my-1">Times clicked:</h3>
+  				<p class="display-4 text-primary" id="cat-counter">0</p>
   			</div>
   		</div>
   	</div>
@@ -31,7 +37,7 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="mvc.js"></script>
 </body>
 
 </html>
