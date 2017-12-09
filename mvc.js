@@ -1,7 +1,7 @@
 $(function() {
 
 	// Define the number of cats (Max 12 currently)
-	const NUM_CATS = 9999;
+	const NUM_CATS = 100;
 
 	// Names of cats
 	const CAT_NAMES = ["George", "Piccolo", "Adam", "Blue",
@@ -115,6 +115,7 @@ $(function() {
 		renderCurrentCat: function() {
 			$('#intro').hide();
 			$('#cat-info').show();
+
 			var nameDisplay = $('#cat-name');
 			var picDisplay = $('#cat-pic');
 			var counterDisplay = $('#cat-counter');
@@ -122,6 +123,13 @@ $(function() {
 			nameDisplay.text(octopus.currentCat.name);
 			picDisplay.attr('src', octopus.currentCat.img_url);
 			counterDisplay.text(octopus.currentCat.clickCount);
+
+			view.setMaxHeight();
+		},
+
+		setMaxHeight: function() {
+			var height = $('#cat-display').height();
+			$('#cat-list').css('max-height', `${height} + px`);
 		}
 	};
 

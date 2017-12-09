@@ -1,3 +1,11 @@
+.row {
+	max-height: 85vh;
+}
+
 .cat-img {
 	max-height: 400px;
+}
+
+#cat-list {
+	overflow: auto;
 }
