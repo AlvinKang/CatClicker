@@ -50,7 +50,7 @@ $(function() {
 			}
 
 			// Fill up cats array with Cat objects
-			for (var i = 0; i < maxSize; i++) {
+			for (var i = 0; i < actualSize; i++) {
 				this.cats.push(new Cat(CAT_NAMES[i],
 											 				 CAT_IMG_URLS[i],
 											 				 i));
