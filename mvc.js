@@ -65,6 +65,7 @@ $(function() {
 			this.currentCat = model.cats[0];
 			view.init();
 			octopus.addClickOnNames();
+			octopus.initAdminMode();
 		},
 
 		addClickOnNames: function() {
@@ -93,6 +94,25 @@ $(function() {
 
 		incrementCurrentCatCounter: function() {
 			this.currentCat.clickCount++;
+		},
+
+		// Admin mode functionality
+		initAdminMode: function() {
+			// When admin button is clicked
+			$('#admin-btn').click(function() {
+				// Fill out the form with current cat values
+				view.setAdminForm();
+			});
+			// When the save button (inside modal) is clicked
+			$('button[name=updateCat]').click(function() {
+				// Update current cat's name, image url, numClicks
+				octopus.currentCat.name = $('input[name=catName]').val();
+				octopus.currentCat.img_url = $('input[name=imgURL]').val();
+				octopus.currentCat.clickCount = $('input[name=numClicks]').val();
+
+				// Render the view
+				view.renderCurrentCat();
+			});
 		}
 	};
 
@@ -130,6 +150,17 @@ $(function() {
 		setMaxHeight: function() {
 			var height = $('#cat-display').height();
 			$('#cat-list').css('max-height', `${height} + px`);
+		},
+
+		// Set and display the admin input values (to current cat info)
+		setAdminForm: function() {
+			var nameInput = $('input[name=catName]');
+			var urlInput = $('input[name=imgURL]');
+			var numClicksInput = $('input[name=numClicks]');
+
+			nameInput.val(octopus.currentCat.name);
+			urlInput.val(octopus.currentCat.img_url);
+			numClicksInput.val(octopus.currentCat.clickCount);
 		}
 	};
 
